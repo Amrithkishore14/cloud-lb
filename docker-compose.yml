@@ -1,0 +1,10 @@
+services:
+  cloud-lb:
+    build: .
+    image: cloud-lb-cloud-lb:latest
+    container_name: cloud_lb_app
+    working_dir: /app
+    command: ["bash", "-lc", "echo '✅ Container is up and running!'; tail -f /dev/null"]
+    environment:
+      - DISPLAY=
+    volumes: []

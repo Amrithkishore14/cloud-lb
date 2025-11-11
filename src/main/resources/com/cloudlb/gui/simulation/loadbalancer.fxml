@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cloudlb.gui.LoadBalancerController"
+      spacing="10" alignment="CENTER" style="-fx-padding:20;">
+    <Label text="Load Balancer Simulation" style="-fx-font-size:18px; -fx-font-weight:bold;" />
+    <HBox spacing="10">
+        <Button text="Round Robin" onAction="#simulateRoundRobin" />
+        <Button text="FCFS" onAction="#simulateFCFS" />
+        <Button text="SJN (Shortest Job Next)" onAction="#simulateSJN" />
+    </HBox>
+    <Button text="⬅ Back to Dashboard" onAction="#goBack" />
+    <TextArea fx:id="logArea" prefHeight="200" prefWidth="400" wrapText="true"
+              style="-fx-control-inner-background:#000; -fx-text-fill:#00FF00;"/>
+    <BarChart fx:id="chart" prefHeight="250" prefWidth="400">
+        <xAxis>
+            <CategoryAxis label="Nodes" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Requests Handled" />
+        </yAxis>
+    </BarChart>
+</VBox>
+

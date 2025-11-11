@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.cloudlb.gui.LoginController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="Cloud-LB Login" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+    <TextField fx:id="usernameField" promptText="Username" />
+    <PasswordField fx:id="passwordField" promptText="Password" />
+    <Button text="Login" onAction="#handleLogin" />
+    <Button text="Create Account" onAction="#openSignup" />
+</VBox>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.cloudlb.gui.FileManagerController"
+      alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+    <Label text="User File Manager" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+    <ListView fx:id="fileList" prefHeight="150" prefWidth="300" />
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Upload" onAction="#uploadFile" />
+        <Button text="Delete" onAction="#deleteFile" />
+        <Button text="Refresh" onAction="#refreshFiles" />
+    </HBox>
+    <Label fx:id="statusLabel" text="" />
+</VBox>
+

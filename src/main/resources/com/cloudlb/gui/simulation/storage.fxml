@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cloudlb.gui.StorageController"
+      spacing="10" alignment="CENTER" style="-fx-padding:20;">
+
+    <!-- 🟢 Status indicator + header -->
+    <HBox spacing="8" alignment="CENTER">
+        <HBox fx:id="statusBox"
+              style="-fx-background-color:#E53935;
+                     -fx-background-radius:50%;
+                     -fx-min-width:14;
+                     -fx-min-height:14;"/>
+        <Label fx:id="statusLabel"
+               text="Offline"
+               style="-fx-font-weight:bold;"/>
+        <Label text=" | File Partitioning &amp; Aggregation Simulation"
+               style="-fx-font-size:18px; -fx-font-weight:bold;" />
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Select File &amp; Split" onAction="#splitFile" />
+        <Button text="Combine Chunks" onAction="#combineChunks" />
+        <Button text="Verify Checksum" onAction="#verifyChecksum" />
+    </HBox>
+
+    <!-- Back button -->
+    <Button text="← Back to Dashboard" onAction="#goBack" />
+
+    <!-- Log area -->
+    <TextArea fx:id="logArea"
+              prefHeight="250"
+              prefWidth="420"
+              wrapText="true"
+              style="-fx-control-inner-background:#000; -fx-text-fill:#00FF00;" />
+</VBox>
+
